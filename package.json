@@ -13,7 +13,7 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.6.5",
     "nodemon": "^3.0.1",
-    "primereact": "^10.1.1",
+    "primereact": "^10.2.1",
     "react": "^18.2.0",
     "react-auth-kit": "^2.12.7",
     "react-dom": "^18.2.0",
