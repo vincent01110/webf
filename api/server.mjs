@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import jsonwebtoken from 'jsonwebtoken';
 import { productRouter } from './routes/product.mjs';
+import { userRouter } from './routes/user.mjs';
 
 const app = express()
 
@@ -11,6 +11,7 @@ app.use(cors({
 }))
 
 app.use('/product', productRouter)
+app.use('/user', userRouter)
 
 app.get('/', (req, res) => {
     res.status(200).json({
