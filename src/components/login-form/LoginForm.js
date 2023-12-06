@@ -75,7 +75,6 @@ const LoginForm = () => {
             <input placeholder='Password...' type='password' onChange={passwordChangeHandler} />
             <div className={style.buttons}>
                 <button onClick={login}>Log In</button>
-                <button>Register</button>
             </div>
             {errorMsg && <div className={style.error}>{errorMsg}</div>}
         </form>

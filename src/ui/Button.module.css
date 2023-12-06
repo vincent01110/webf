@@ -5,14 +5,13 @@
     height: 2rem;
     border-radius: 30px;
     outline: none;
-    border: none;
-    border-color:#FFBA08;
-    background-color: #FFBA08;
+    border: 1px solid transparent;
+    background-color: #00ccff;
     color: white;
     font-size: larger;
     cursor: pointer;
 }
 
 .button:hover {
-    background-color: #ffc42e;
+    background-color: #d500f9;
 }

@@ -1,0 +1,18 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    width: max-content;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card *{
+    margin: 1rem;
+}
+
+.card button{
+    width: 10rem;
+}

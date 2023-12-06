@@ -41,20 +41,23 @@
     cursor: pointer;
 }
 
-.card button:first-of-type{
-    margin-right: 1rem;
-    background-color: #00ccff;
-}
-
-.card button:hover{
-    background: linear-gradient(#00ccff, #d500f9);
-}
-
 .buttons{
     margin-inline: auto;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.buttons button{
+    background-color: #00ccff;
+}
+
+.buttons button:hover{
+    background:  #d500f9;
+}
+
+
 
 .error{
     width: 15rem;

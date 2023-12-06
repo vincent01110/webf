@@ -1,0 +1,107 @@
+.page{
+    min-height: 100vh;
+}
+
+.formCard{
+    min-width: 40%;
+    max-width: 80%;
+    width: min-content;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.formCard > * {
+    display: block;
+}
+
+.dropdown{
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    border-radius: 10px;
+    padding: 0.6rem;
+    font-size: larger;
+    min-width: 10rem;
+    margin-bottom: 1rem;
+}
+
+
+.items{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    padding: 0.3rem;
+    font-size: large;
+}
+
+.inputText{
+    min-width: 30rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    text-indent: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputNumber{
+    min-width: 30rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    text-indent: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.textArea{
+    padding: 0.5rem;
+
+}
+
+.invalid{
+    border-color: red;
+}
+
+.addButton:disabled{
+    background-color: gray;
+}
+
+.error{
+    background-color: rgb(255, 73, 73);
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+
+
+[class~="p-toast"]{
+    background-color: rgb(255, 236, 236);
+    border-radius: 5px;
+
+}
+
+[class~="p-toast-icon-close"]{
+    margin: 1rem;
+}
+[class~="p-toast-message-icon"]{
+    width: 2rem;
+    height: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    color: red;
+    
+}
+.cancelButton{
+    background-color: #9D0208;
+    margin-left: 1rem;
+}
+
+
+
+

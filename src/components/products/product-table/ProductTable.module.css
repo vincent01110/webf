@@ -1,0 +1,30 @@
+.container{
+    max-width: 90%;
+    width: 60%;
+    min-height: 30rem;
+}
+
+.row:focus{
+    background-color: #e555ff;
+    color: white;
+    font-weight: bolder;
+}
+
+.row:focus:hover{
+    background-color: #e555ff;
+}
+
+.row:hover{
+    background-color: #49dbff;
+}
+
+.cell{
+    padding: 0.6rem;
+}
+
+
+
+.paginator > *{
+    margin-top: 2rem;
+    margin-inline: 1rem;
+}
