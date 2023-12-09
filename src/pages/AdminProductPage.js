@@ -1,14 +1,17 @@
 import React from 'react';
-import style from './AdminPage.module.css';
+import style from './AdminProductPage.module.css';
 import Products from '../components/products/Products';
 import Logout from '../components/logout/Logout';
+import Navigator from '../components/navigator/Navigator';
 
 
-const AdminPage = () => {
+const AdminProductPage = () => {
     return <div className={style.page}>
         <Logout />
         <Products />
+
+        <Navigator />
     </div>;
 }
  
-export default AdminPage;
+export default AdminProductPage;

@@ -107,7 +107,7 @@ const ProductEdit = () => {
                         'Content-Type': 'application/json'
                     }
                 }).then(() => {
-                    navigate('/admin')
+                    navigate('/admin/product')
                 })
             } catch (err) {
                 console.error("API request error: " + err)
@@ -116,7 +116,7 @@ const ProductEdit = () => {
 
     }
     const onCancel = () => {
-        navigate('/admin')
+        navigate('/admin/product')
     }
 
     const validateForm = () => {

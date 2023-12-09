@@ -69,7 +69,7 @@ const ProductAdd = () => {
                         'Content-Type': 'application/json'
                     }
                 }).then(() => {
-                    navigate('/admin')
+                    navigate('/admin/product')
                 })
             } catch(err){
                 console.error("API request error: " + err)
@@ -81,7 +81,7 @@ const ProductAdd = () => {
     }
 
     const onCancel = () => {
-        navigate('/admin')
+        navigate('/admin/product')
     }
 
     const validateForm = () => {

@@ -47,7 +47,7 @@ const LoginForm = () => {
                     authState: { email: email.value }
                 })
                 localStorage.setItem('email', email.value)
-                navigate("/admin")
+                navigate("/admin/product")
             } catch (err) {
                 if (err.response.status === 401) {
                     setErrorMsg(err.response.data)

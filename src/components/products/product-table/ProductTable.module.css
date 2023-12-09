@@ -5,17 +5,17 @@
 }
 
 .row:focus{
-    background-color: #e555ff;
+    background-color: #e555ff8a;
     color: white;
     font-weight: bolder;
 }
 
 .row:focus:hover{
-    background-color: #e555ff;
+    background-color: #e555ff8a;
 }
 
 .row:hover{
-    background-color: #49dbff;
+    background-color: #49dbff5f;
 }
 
 .cell{
