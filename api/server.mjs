@@ -3,6 +3,7 @@ import cors from 'cors';
 import { productRouter } from './routes/product.mjs';
 import { userRouter } from './routes/user.mjs';
 import { getDiscounts } from './database.mjs';
+import { collectionRouter } from './routes/collection.mjs';
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.use(cors({
 
 app.use('/product', productRouter)
 app.use('/user', userRouter)
+app.use('/collection', collectionRouter)
 
 app.get('/discounts', async (req, res) => {
     try {

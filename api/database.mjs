@@ -91,3 +91,32 @@ export async function deleteProduct(id){
     const result = await pool.query('DELETE FROM product WHERE id = ?', [id])
     return result[0]
 }
+
+
+export async function getCollection(id) {
+    const result = await pool.query(`SELECT * FROM collection WHERE id = ?;`, [id]);
+    return result[0]
+}
+
+export async function getCollections(){
+    const result = await pool.query('SELECT * FROM collection')
+    return result[0]
+}
+
+export async function getCollectionProducts(id) {
+    const result = await pool.query(
+        `SELECT product.*, collection.name as col_name 
+        FROM product, collection_product, collection 
+        WHERE product.id = collection_product.product_id 
+            AND collection_product.collection_id = collection.id 
+            AND collection.id = ?;`, [id]);
+    return result[0]
+}
+
+export async function getAllCollectionProducts(){
+    const result = await pool.query(`
+    SELECT product.*, collection.id as collection_id, collection.name as collection_name 
+    FROM product, collection_product, collection 
+    WHERE product.id = collection_product.product_id AND collection_product.collection_id = collection.id`)
+    return result[0]
+}

@@ -1,0 +1,29 @@
+.card{
+    display: flex;
+    margin-top: 2rem;
+    width: 50%;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.card button{
+    width: 50%;
+    height: 2rem;
+    background-color: #00ccff;
+    border-radius: 1rem;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border: 0;
+    outline: transparent;
+    cursor: pointer;
+}
+
+
+
+.card button:hover{
+    background:  #d500f9;
+}
