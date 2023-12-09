@@ -1,0 +1,11 @@
+.card{
+    width: 70%;
+    display: flex;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.list{
+    list-style: none;
+    width: 80%;
+}

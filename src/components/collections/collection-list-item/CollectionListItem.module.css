@@ -1,0 +1,22 @@
+.item{
+    font-size: larger;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+}
+
+.item:hover{
+    background-color: #49dbff91;
+    color: white;
+}
+
+.selected{
+    background-color: #e555ff96;
+    color: white;
+    font-weight: bolder;
+}
+
+.selected{
+    background-color: #e555ff96;
+}
