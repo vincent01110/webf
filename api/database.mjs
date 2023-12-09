@@ -120,3 +120,37 @@ export async function getAllCollectionProducts(){
     WHERE product.id = collection_product.product_id AND collection_product.collection_id = collection.id`)
     return result[0]
 }
+
+
+export async function createCollection(name){
+    const result = pool.query(`
+    INSERT INTO collection (name)
+       VALUES (?);`, [name])
+    return result[0]
+}
+
+export async function modifyCollName(id, name){
+    const result = pool.query(`
+    UPDATE collection
+        SET name = ?
+    WHERE id = ?`, [name, +id])
+}
+
+export async function deleteCollection(id){
+    const result = pool.query(`
+    DELETE FROM collection WHERE id = ?`, [+id])
+    return result[0]
+}
+
+export async function deleteCollectionProducts(id){
+    const result = pool.query(`
+    DELETE FROM collection_product WHERE collection_id = ?`, [+id])
+    return result[0]
+}
+
+export async function addProductToCollection(collection_id, product_id){
+    const result = pool.query(`
+        INSERT INTO collection_product (collection_id, product_id)
+        VALUES (?, ?)`, [+collection_id, +product_id])
+    return result[0]
+}

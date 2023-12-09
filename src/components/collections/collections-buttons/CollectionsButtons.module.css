@@ -1,0 +1,61 @@
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.add, .delete, .edit{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+[class~="p-confirm-popup"]{
+    background-color: rgb(250, 195, 195);
+    color: red;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+[class~="p-confirm-popup-footer"]{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+[class~="p-confirm-popup-footer"] > button{
+    margin: 0.2rem;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    width: 4rem;
+    color: white;
+    font-weight: bolder;
+
+}
+[class~="p-confirm-popup-footer"] > button:first-of-type{
+    background-color: #FFBA08;
+}
+[class~="p-confirm-popup-footer"] > button:last-of-type{
+    background-color: red;
+}
+
+[class~="p-toast"]{
+    background-color: rgb(255, 236, 236);
+    border-radius: 5px;
+
+}
+
+[class~="p-toast-icon-close"]{
+    margin: 1rem;
+}
+[class~="p-toast-message-icon"]{
+    width: 2rem;
+    height: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    color: red;
+    
+}

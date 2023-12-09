@@ -1,0 +1,42 @@
+.page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField{
+    min-width: 30rem;
+    height: 3rem;
+    font-size: x-large;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    text-indent: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+
+.card label{
+    font-size: larger;
+    text-indent: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.add{
+    margin-right: 0.5rem;
+}
+
+.invalid{
+    border: 1px solid red;
+}

@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllCollectionProducts, getDiscount, getCollectionProducts, getCollections, getCollection } from '../database.mjs';
+import { getAllCollectionProducts, getDiscount, getCollectionProducts, getCollections, getCollection, createCollection, deleteCollection, deleteCollectionProducts, modifyCollName, addProductToCollection } from '../database.mjs';
 import { writeToLogFile } from '../logger.mjs';
 import { calculateDiscount } from '../calculations.mjs';
 
@@ -39,7 +39,7 @@ collectionRouter.get('/product', async (req, res) => {
     }
 })
 
-collectionRouter.get('/product/:id', async (req, res) => {
+collectionRouter.get('/:id/product', async (req, res) => {
     try {
         const id = req.params.id
         const products = await getCollectionProducts(id)
@@ -51,6 +51,65 @@ collectionRouter.get('/product/:id', async (req, res) => {
         res.send(l)
     } catch (err) {
         writeToLogFile(`(GET) /collection/product/:id -> Error: ${err}`);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+
+collectionRouter.post('/', async (req, res) => {
+    try {
+        const {name} = req.body
+        const coll = await createCollection(name)
+        res.status(201).send(coll)
+    } catch (err) {
+        writeToLogFile(`(POST) /collection -> Error: ${err}`);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+collectionRouter.delete('/:id', async (req, res) => {
+    try {
+        const id = req.params.id
+        const coll = await deleteCollection(id)
+        const prod = await deleteCollectionProducts(id)
+        res.status(200).send({collection: coll, products: prod})
+    } catch (err) {
+        writeToLogFile(`(DELETE) /collection/:id -> Error: ${err}`);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+collectionRouter.put('/:id', async (req, res) => {
+    try{
+        const id = req.params.id
+        const {name} = req.body
+        const query = await modifyCollName(id, name)
+        res.status(200).send(query)
+    } catch (err){
+        writeToLogFile(`(PUT) /collection/:id -> Error: ${err}`);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+collectionRouter.delete('/:id/product', async (req, res) => {
+    try {
+        const id = req.params.id
+        const coll = await deleteCollectionProducts(id)
+        res.status(200).send(coll)
+    } catch (err) {
+        writeToLogFile(`(DELETE) /collection/:id -> Error: ${err}`);
+        res.status(500).send('Internal Server Error');
+    }
+})
+
+collectionRouter.post('/:collId/product/:prodId', async (req, res) => {
+    try {
+        const collId = req.params.collId
+        const prodId = req.params.prodId
+        const coll = await addProductToCollection(collId, prodId)
+        res.status(201).send(coll)
+    } catch (err) {
+        writeToLogFile(`(POST) /collection -> Error: ${err}`);
         res.status(500).send('Internal Server Error');
     }
 })

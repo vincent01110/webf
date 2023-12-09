@@ -3,9 +3,14 @@
     display: flex;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    flex-direction: column;
 }
 
 .list{
     list-style: none;
     width: 80%;
+}
+
+.card h1{
+    margin: 0;
 }

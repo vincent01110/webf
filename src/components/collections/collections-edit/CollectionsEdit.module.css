@@ -1,0 +1,77 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.inputField {
+    min-width: 25rem;
+    height: 2rem;
+    font-size: larger;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    text-indent: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputCard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.inputCard label {
+    font-size: large;
+    text-indent: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.productSelectCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 60%;
+}
+
+.image {
+    width: 20%;
+    height: 20%;
+}
+
+.template {
+    display: flex;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info *{
+    margin: 0.2rem;
+}
+
+.name {
+    width: 100%;
+}
+
+.buttons {
+    width: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.apply {
+    margin-right: 2rem;
+}
+
+.selected{
+    background-color: #49dbff91;
+}
